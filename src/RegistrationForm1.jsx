@@ -8,12 +8,14 @@ function RegistrationForm1() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    alert("Успешно зарегистрировано");
     alert(JSON.stringify(data, null, 1));
   };
   const password = watch("password");
 
   return (
     <>
+      <h1>Это React Hook Form</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Имя пользователя: </label>
